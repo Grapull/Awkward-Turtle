@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\TurtleMoveScript.cs">
+    <Files>
+      <File FileName="Assets\scripts\TurtleMoveScript.cs" Line="28" Column="28" />
+      <File FileName="Assets\scripts\shaderMove.cs" Line="22" Column="46" />
+      <File FileName="Assets\rotateSemi.cs" Line="71" Column="4" />
+      <File FileName="Assets\scripts\DieScript.cs" Line="52" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
