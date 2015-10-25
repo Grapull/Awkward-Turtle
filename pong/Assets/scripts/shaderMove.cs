@@ -14,7 +14,7 @@ public class shaderMove : MonoBehaviour {
 			render.sortingOrder= sortingLayer;
 		}
 	}
-	int i2=1;
+	int i2=-2;
 
 	// Update is called once per frame
 	void Update () {

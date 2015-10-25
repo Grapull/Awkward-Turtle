@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class winScript : MonoBehaviour {
 	List<GameObject> platforms = new List<GameObject>();
-	bool won = false;
+	bool won;
 	public Rigidbody2D endPlatform;
 	GameObject turtle;
 	// Use this for initialization

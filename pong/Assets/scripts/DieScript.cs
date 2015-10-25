@@ -2,12 +2,14 @@
 using System.Collections;
 
 public class DieScript : MonoBehaviour {
+
+
 	public GameObject turtle;
 	public Rigidbody2D TurtleBody;
 	public float x;
 	public float y;
 	public float terminalVelocity=1;
-		Vector2 startVector; 
+	public Vector2 startVector = new Vector2 (-30, 5);
 	Vector2 startVelocities= new Vector2 (0,0);
 	bool TimeToDie = false;
 	public float DieVelocity=2;
@@ -16,13 +18,24 @@ public class DieScript : MonoBehaviour {
 		TurtleBody = GetComponent<Rigidbody2D> ();
 		x = turtle.transform.position.x;
 		y = turtle.transform.position.y;
-		startVector = new Vector2 (x, y);
+
 	}
 	public bool colliding;
+	public bool inRange;
 	public float dieDelay=1;
-	public float currentDelay=0;
+	public float RangeDieDelay=1;
+	private float currentDelay=0;
+	private float InRangeDelay=0;
 	// Update is called once per frame
 	void Update () {
+
+		if (inRange) {
+			InRangeDelay=0;
+		}
+		if (!inRange) {
+
+			InRangeDelay += Time.deltaTime;
+		}
 
 
 		if (!colliding) {
@@ -36,7 +49,7 @@ public class DieScript : MonoBehaviour {
 		if (TurtleBody.velocity.y > terminalVelocity|| TurtleBody.velocity.y*-1>terminalVelocity ) {
 			TimeToDie=true;
 		}
-		if (TimeToDie== true) {
+		if (TimeToDie== true || InRangeDelay>RangeDieDelay) {
 			die();
 			TimeToDie= false;
 		}
@@ -56,12 +69,37 @@ public class DieScript : MonoBehaviour {
 	{
 		colliding = false;
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+
+		Debug.Log (other);
+		inRange = true;
+		
+	}
+	void OnTriggerStay2D(Collider2D other) {
+		
+		Debug.Log (other);
+		inRange = true;
+		
+	}
+	void OnTriggerExit2D(Collider2D other) {
+		Debug.Log (other);
+		inRange = false;
+
+	}
+
+	
+	
+	
+	
 	void die()
 	{
+		TurtleMoveScript turtleMovescript = gameObject.GetComponent<TurtleMoveScript>();
+		startVector = turtleMovescript.SpawnVector;
 		turtle.transform.position = startVector;
 		TurtleBody.velocity = startVelocities;
 		currentDelay = 0;
-		TurtleMoveScript turtleMovescript = gameObject.GetComponent<TurtleMoveScript>();
+
 		turtleMovescript.i = 1;
 
 	}
