@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ContactScript.cs">
+    <Files>
+      <File FileName="Assets\ContactScript.cs" Line="6" Column="1" />
+      <File FileName="Assets\scripts\setSortingLayer.cs" Line="6" Column="29" />
+      <File FileName="Assets\scripts\TurtleMoveScript.cs" Line="19" Column="3" />
+      <File FileName="Assets\scripts\DieScript.cs" Line="52" Column="26" />
+      <File FileName="c:\Users\Joel\Documents\GitHub\Awkward-Turtle\pong\Assets\winScript.cs" Line="8" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
