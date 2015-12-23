@@ -46,14 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ContactScript.cs" />
-     <Compile Include="Assets\rotateSemi.cs" />
      <Compile Include="Assets\scripts\CameraMoveScript.cs" />
+     <Compile Include="Assets\scripts\DeathScript.cs" />
      <Compile Include="Assets\scripts\DieScript.cs" />
      <Compile Include="Assets\scripts\TurtleMoveScript.cs" />
+     <Compile Include="Assets\scripts\TurtleMovementScript.cs" />
+     <Compile Include="Assets\scripts\rotateSemi.cs" />
      <Compile Include="Assets\scripts\setSortingLayer.cs" />
      <Compile Include="Assets\scripts\shaderMove.cs" />
-     <Compile Include="Assets\winScript.cs" />
+     <Compile Include="Assets\scripts\winScript.cs" />
      <None Include="Assets\Shaders and materials\$ddInvert.shader" />
      <None Include="Assets\Shaders and materials\$ddInvert (2).shader" />
  <Reference Include="UnityEngine.UI">

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+//create turtle autoload game;
 
 
 
@@ -15,7 +16,7 @@ public class TurtleMoveScript : MonoBehaviour {
 
 		SpawnVector = new Vector2 (start.transform.position.x, (start.transform.position.y + 1));
 		TurtleBody = GetComponent<Rigidbody2D> ();
-		initialXL = startAcel;
+
 
 		TurtleBody.position = SpawnVector;
 
@@ -27,15 +28,15 @@ public class TurtleMoveScript : MonoBehaviour {
 	public KeyCode SwitchGravity;
 	public float speed= 10;
 	public float deceleration= 1;
-	public float acceleration = 1;
-	public float startAcel=1;
+
+
 	public Vector2 moveSpeed;
 	public float gravity=10;
 	public float termialVelocity= 56;
 	public float muchVel= 0.5f;
 	public bool colliding;
 	 float howMuchVel=1;
-	float initialXL;
+
 	//variables to use with gyro
 		
 
@@ -64,15 +65,15 @@ public class TurtleMoveScript : MonoBehaviour {
 
 
 			if (Input.GetKey (RightKey)&&colliding) {
-				startAcel *= acceleration;
-				moveSpeed = new Vector2 ((TurtleBody.velocity.x + startAcel * howMuchVel), TurtleBody.velocity.y);
+				
+				moveSpeed = new Vector2 ((TurtleBody.velocity.x + 1 * howMuchVel), TurtleBody.velocity.y);
 				if (moveSpeed.x > speed) {
 					moveSpeed.x = speed;
 				}
 
 			} else if (Input.GetKey (LeftKey)&&colliding) {
-				startAcel *= acceleration;
-				moveSpeed = new Vector2 ((TurtleBody.velocity.x + startAcel * -1 * howMuchVel), TurtleBody.velocity.y);
+				
+				moveSpeed = new Vector2 ((TurtleBody.velocity.x + 1* -1 * howMuchVel), TurtleBody.velocity.y);
 				if (moveSpeed.x < speed * -1) {
 					moveSpeed.x = speed * -1;
 				}
@@ -81,7 +82,7 @@ public class TurtleMoveScript : MonoBehaviour {
 		else 
 		{
 			moveSpeed= new Vector2(TurtleBody.velocity.x/deceleration,TurtleBody.velocity.y);
-			startAcel=initialXL;
+
 		}
 	}
 	public int i=1;
