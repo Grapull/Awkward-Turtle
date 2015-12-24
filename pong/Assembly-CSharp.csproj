@@ -47,8 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\CameraMoveScript.cs" />
+     <Compile Include="Assets\scripts\CameraTurtleTrack.cs" />
      <Compile Include="Assets\scripts\DeathScript.cs" />
      <Compile Include="Assets\scripts\DieScript.cs" />
+     <Compile Include="Assets\scripts\ReferenceScript.cs" />
+     <Compile Include="Assets\scripts\RestartScript.cs" />
+     <Compile Include="Assets\scripts\RotateTurtleSpriteScript.cs" />
      <Compile Include="Assets\scripts\TurtleMoveScript.cs" />
      <Compile Include="Assets\scripts\TurtleMovementScript.cs" />
      <Compile Include="Assets\scripts\rotateSemi.cs" />

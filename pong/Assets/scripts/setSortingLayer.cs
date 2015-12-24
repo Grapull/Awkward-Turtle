@@ -4,7 +4,7 @@ using System.Collections;
 public class setSortingLayer : MonoBehaviour {
 	private Renderer render;//renderer
 	public int sortingLayer=-100;//layer that the object renders, i.e at the front or at the back
-	public KeyCode gravityButton;//Button that flips Gravity
+	public KeyCode GravityButton;
 	
 	// Use this for initialization
 	void Start () {
@@ -18,7 +18,8 @@ public class setSortingLayer : MonoBehaviour {
 	}
 	void SetLayer()
 	{
-		if (Input.GetKeyDown (gravityButton)) {//if gravity is flipped
+
+		if (Input.GetKeyDown (GravityButton)) {//if gravity is flipped
 			sortingLayer*=-1;//move layer from back to front or visa versa
 
 
