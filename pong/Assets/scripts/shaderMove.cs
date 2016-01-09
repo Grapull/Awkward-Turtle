@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class shaderMove : MonoBehaviour {
-	public KeyCode SwitchGravity;
+	public KeyCode SwitchGravityButton;
+	public float FlipGravity;
 	public GameObject invertCube;
 	private Renderer render;
 
